@@ -52,12 +52,7 @@ RSpec.describe Token do
 
     tokens.each_char do |c|
       token = Token.new(c)
-
-      if options.key?(:to_not_be)
-        expect(token.send("#{expectation}?")).to be false
-      else
-        expect(token.send("#{expectation}?")).to be true
-      end
+      expect(token.send("#{expectation}?")).to be !options.key?(:to_not_be)
     end
   end
 end
