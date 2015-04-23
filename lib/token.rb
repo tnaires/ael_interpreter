@@ -1,7 +1,6 @@
 class Token
   def initialize(char)
     raise 'Only one character is allowed' unless char.size == 1
-
     @char = char
   end
 
