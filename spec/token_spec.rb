@@ -1,7 +1,7 @@
 require 'token'
 
 RSpec.describe Token do
-  it 'should be created with only one character' do
+  it 'is created with only one character' do
     expect {
       Token.new('abc')
     }.to raise_error
